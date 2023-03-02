@@ -1,15 +1,6 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-        origins 'https://national-hockey-league-nhl-bubablue.vercel.app/', '
-        https://national-hockey-league-nhl-git-main-bubablue.vercel.app/',
-        'https://national-hockey-league-nhl.vercel.app/', 'https://national-hockey-league-nhl-git-main.vercel.app/',
-        'https://national-hockey-league-nhl-bubablue.vercel.app', 'https://national-hockey-league-nhl-git-main-bubablue.vercel.app',
-        'https://national-hockey-league-nhl.vercel.app', 'https://national-hockey-league-nhl-git-main.vercel.app',
-        'https://national-hockey-league-nhl-bubablue.vercel.app/*', 'https://national-hockey-league-nhl-git-main-bubablue.vercel.app/*',
-        'https://national-hockey-league-nhl.vercel.app/*', 'https://national-hockey-league-nhl-git-main.vercel.app/*',
-        'https://national-hockey-league-nhl-bubablue.vercel.app/*/*', 'https://national-hockey-league-nhl-git-main-bubablue.vercel.app/*/*',
-        'https://*.*', 'https://*', 'http://*.*', 'http://*',
-        ENV.fetch('ALLOWED_ORIGINS') { '*' }
+        origins ENV.fetch('ALLOWED_ORIGINS', 'https://national-hockey-league-nhl.vercel.app, https://national-hockey-league-nhl-git-main.vercel.app, https://national-hockey-league-nhl-bubablue.vercel.app')
         resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],
