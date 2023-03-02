@@ -8,7 +8,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
         'https://national-hockey-league-nhl-bubablue.vercel.app/*', 'https://national-hockey-league-nhl-git-main-bubablue.vercel.app/*',
         'https://national-hockey-league-nhl.vercel.app/*', 'https://national-hockey-league-nhl-git-main.vercel.app/*',
         'https://national-hockey-league-nhl-bubablue.vercel.app/*/*', 'https://national-hockey-league-nhl-git-main-bubablue.vercel.app/*/*',
-        'https://*.*', 'https://*', 'http://*.*', 'http://*', 'http://localhost:3000', 'http://localhost:3000/*', 'http://localhost:3000/*/*',
+        'https://*.*', 'https://*', 'http://*.*', 'http://*',
         ENV.fetch('ALLOWED_ORIGINS') { '*' }
         resource '*',
         headers: :any,
