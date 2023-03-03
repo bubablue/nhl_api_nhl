@@ -75,11 +75,11 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+  production:
+    url: <%= ENV['postgres://bubablue:Passcode_00@nhl-api-nhl-3760.postgresql.a.osc-fr1.scalingo-dbs.com:32166/nhl_api_nhl_3760?sslmode=prefer'] %>
 #
-production:
-  <<: *default
-  database: nhl_api_production
-  username: nhl_api
-  password: <%= ENV['NHL_API_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: nhl_api_production
+#   username: nhl_api
+#   password: <%= ENV['NHL_API_DATABASE_PASSWORD'] %>
