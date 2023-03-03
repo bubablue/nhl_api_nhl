@@ -37,11 +37,11 @@ development:
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  host: localhost
+  #host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  port: 5432
+  #port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -71,12 +71,12 @@ test:
 # On Heroku and other platform providers, you may have a full connection URL
 # available as an environment variable. For example:
 #
-  DATABASE_URL="postgres://nhl_api_nhl_3760:86NvcGUZ9450z0NTPPv5@nhl-api-nhl-3760.postgresql.a.osc-fr1.scalingo-dbs.com:32166/nhl_api_nhl_3760?sslmode=prefer"
+#   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
 #
 # You can use this database configuration with:
 #
-  production:
-    url: <%= ENV['postgres://nhl_api_nhl_3760:86NvcGUZ9450z0NTPPv5@nhl-api-nhl-3760.postgresql.a.osc-fr1.scalingo-dbs.com:32166/nhl_api_nhl_3760?sslmode=prefer'] %>
+#   production:
+#     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
