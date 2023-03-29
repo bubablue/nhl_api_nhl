@@ -1,0 +1,57 @@
+<%= form_with(model: bet, local: true) do |form| %>
+  <% if bet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bet.errors.count, "error") %> prohibited this bet from being saved:</h2>
+
+      <ul>
+      <% bet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :gamePk %>
+    <%= form.text_field :gamePk %>
+  </div>
+
+  <div class="field">
+    <%= form.label :home %>
+    <%= form.text_field :home %>
+  </div>
+
+  <div class="field">
+    <%= form.label :away %>
+    <%= form.text_field :away %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gameStatus %>
+    <%= form.text_field :gameStatus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :win %>
+    <%= form.text_field :win %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loose %>
+    <%= form.text_field :loose %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paid %>
+    <%= form.text_field :paid %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

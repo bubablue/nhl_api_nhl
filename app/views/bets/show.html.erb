@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gamepk:</strong>
+  <%= @bet.gamePk %>
+</p>
+
+<p>
+  <strong>Home:</strong>
+  <%= @bet.home %>
+</p>
+
+<p>
+  <strong>Away:</strong>
+  <%= @bet.away %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @bet.amount %>
+</p>
+
+<p>
+  <strong>Gamestatus:</strong>
+  <%= @bet.gameStatus %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= @bet.win %>
+</p>
+
+<p>
+  <strong>Loose:</strong>
+  <%= @bet.loose %>
+</p>
+
+<p>
+  <strong>Paid:</strong>
+  <%= @bet.paid %>
+</p>
+
+<%= link_to 'Edit', edit_bet_path(@bet) %> |
+<%= link_to 'Back', bets_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  gamePk: MyString
+  home: MyString
+  away: MyString
+  amount: MyString
+  gameStatus: MyString
+  win: MyString
+  loose: MyString
+  paid: MyString
+
+two:
+  gamePk: MyString
+  home: MyString
+  away: MyString
+  amount: MyString
+  gameStatus: MyString
+  win: MyString
+  loose: MyString
+  paid: MyString
